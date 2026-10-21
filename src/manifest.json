@@ -1,0 +1,16 @@
+{
+	"manifest_version": 1,
+	"id": "com.github.sealor.joplin-plugin-gitsync",
+	"app_min_version": "3.7",
+	"version": "1.0.0",
+	"name": "GitSync",
+	"description": "Synchronize Joplin notes to a git repository over HTTPS. Works on desktop and mobile.",
+	"author": "Stefan Richter",
+	"homepage_url": "https://github.com/sealor/joplin-plugin-git-sync",
+	"repository_url": "https://github.com/sealor/joplin-plugin-git-sync",
+	"keywords": [],
+	"categories": [],
+	"screenshots": [],
+	"icons": {},
+	"promo_tile": {}
+}
