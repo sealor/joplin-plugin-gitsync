@@ -2,9 +2,11 @@
 	"compilerOptions": {
 		"outDir": "./dist/",
 		"module": "commonjs",
-		"target": "es2015",
+		"target": "esnext",
 		"jsx": "react",
 		"allowJs": true,
+		"esModuleInterop": true,
+		"rewriteRelativeImportExtensions": true,
 		"baseUrl": ".",
 		"paths": {
 			"api": ["./api/index.ts"]
