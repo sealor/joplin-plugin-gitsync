@@ -1,6 +1,7 @@
 {
   "name": "joplin-plugin-gitsync",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "dist": "webpack --env joplin-plugin-config=buildMain && webpack --env joplin-plugin-config=buildExtraScripts && webpack --env joplin-plugin-config=createArchive",
     "prepare": "npm run dist",
