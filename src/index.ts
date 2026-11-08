@@ -1,5 +1,6 @@
 import joplin from "api";
 import { JoplinSettingsProvider } from "./joplin-settings";
+import { Synchronizer } from "./synchronizer";
 import { JoplinDatabase } from "./joplin-database";
 
 joplin.plugins.register({
@@ -12,5 +13,9 @@ joplin.plugins.register({
         const database = new JoplinDatabase(joplin);
         const notes = await database.getAllNotes();
         console.log("notes:", notes);
+        console.log(notes);
+
+        const synchronizer = new Synchronizer(database, settingsProvider);
+        await synchronizer.syncNotes();
     },
 });

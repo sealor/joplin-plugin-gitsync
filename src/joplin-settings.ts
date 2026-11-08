@@ -1,5 +1,5 @@
 import type Joplin from "api/Joplin";
-import { type SettingItemType } from "api/types";
+import { SettingItemType } from "api/types";
 
 
 const SETTING = {
