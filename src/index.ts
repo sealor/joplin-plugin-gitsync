@@ -1,5 +1,6 @@
 import joplin from "api";
 import { JoplinSettingsProvider } from "./joplin-settings";
+import { JoplinDatabase } from "./joplin-database";
 
 joplin.plugins.register({
     onStart: async function () {
@@ -8,7 +9,8 @@ joplin.plugins.register({
         const settingsProvider = new JoplinSettingsProvider(joplin);
         await settingsProvider.register();
 
-        const notes: Response = await joplin.data.get(['notes'], { fields: ["id", "title", "body"] });
+        const database = new JoplinDatabase(joplin);
+        const notes = await database.getAllNotes();
         console.log("notes:", notes);
     },
 });
